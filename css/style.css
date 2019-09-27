@@ -45,7 +45,8 @@ li.menu-item a{
   background-color: rgba(240, 197, 46, 0.5);
 }
 
-h2 {
+/* Такое решение тоже меня смущает */
+h1, h2 {
   font-family: "Gilroy";
   font-weight: 700;
   font-size: 47px;
@@ -82,4 +83,45 @@ h2 {
 
 .opacity-link {
   opacity: 0.7;
+}
+
+aside {
+  background-color: #efefef;
+}
+
+.catalog a{
+  text-decoration: none;
+  color: #000;
+}
+
+.item__title {
+  font-family: "Gilroy";
+  font-weight: 700;
+  font-size: 18px;
+  letter-spacing: 0.1pt;
+}
+
+.item__coast {
+  font-family: "Gilroy";
+  font-weight: 300;
+  font-size: 16px;
+  letter-spacing: 0.1pt;
+}
+
+legend {
+  font-family: "Gilroy";
+  font-weight: 700;
+  font-size: 18px;
+  letter-spacing: 0.1pt;
+}
+
+.breadcrumbs {
+  font-size: 14px;
+  color: #000;
+  opacity: .3;
+}
+
+.breadcrumbs a {
+  text-decoration: none;
+  color: #000;
 }

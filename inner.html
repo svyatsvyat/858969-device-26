@@ -4,9 +4,10 @@
     <meta charset="UTF-8">
     <title>Моноподы для селфи</title>
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300&display=swap&subset=cyrillic" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
-    <header>
+ <header class="header">
       <nav>
         <a href="index.html"><img src="img/logo-device.svg" alt="Логотип Девайс" width="163" height="35"></a>
         <form action="https://echo.htmlacademy.ru" method="post">
@@ -17,34 +18,29 @@
         <a href="">Войти</a>
         <a href="">Сравнить</a>
         <a href="">Корзина</a>
-        <ul>
-          <li><a href="">Каталог товаров</a>
+        <ul class="main-menu">
+          <li class="menu-item"><a href="">Каталог товаров</a>
             <ul>
-              <li><a href="">Виртуальная реальность</a></li>
-              <li><a href="">Моноподы дляя селфи</a></li>
-              <li><a href="">Экшн-камеры</a></li>
-              <li><a href="">Фитнес-браслеты</a></li>
-              <li><a href="">Умные часы</a></li>
-              <li><a href="">Квадрокоптеры</a></li>
+              <li class="menu-item"><a href="">Виртуальная реальность</a></li>
+              <li class="menu-item"><a href="">Моноподы дляя селфи</a></li>
+              <li class="menu-item"><a href="">Экшн-камеры</a></li>
+              <li class="menu-item"><a href="">Фитнес-браслеты</a></li>
+              <li class="menu-item"><a href="">Умные часы</a></li>
+              <li class="menu-item"><a href="">Квадрокоптеры</a></li>
             </ul>
           </li>
-          <li><a href="">Доставка</a></li>
-          <li><a href="">Гарантия</a></li>
-          <li><a href="">Контакты</a></li>
+          <li class="menu-item"><a href="">Доставка</a></li>
+          <li class="menu-item"><a href="">Гарантия</a></li>
+          <li class="menu-item"><a href="">Контакты</a></li>
         </ul>
       </nav>
     </header>
     <main>
-      <ul>
+      <h1>Моноподы для селфи</h1>
+      <ul class="breadcrumbs">
         <li><a href="">Главная</a></li>
         <li><a href="">Каталог товаров</a></li>
         <li>Монопод для селфи</li>
-      </ul>
-      <h1>Моноподы для селфи</h1>
-      <ul>
-        <li><a href="index.html">Главная</a></li>
-        <li><a href="">Каталог товаров</a></li>
-        <li>Моноподы для селфи</li>
       </ul>
       <aside>
         <h2>Фильтрация</h2>
@@ -83,60 +79,60 @@
               Нет
             </label>
           </fieldset>
-          <button type="submit">Показать</button>
+          <button class="button" type="submit">Показать</button>
         </form>
       </aside>
       <section>
-        <ol>
+        <ol class="catalog">
           <li>
-            <a href="#">
+            <a class="item" href="#">
               <img src="img/item-1.jpg" alt="Любительская селфи-палка" width="360" height="380">
-              <h3>Любительская селфи-палка</h3>
-              <span>500&nbsp;руб.</span>
+              <h3 class="item__title">Любительская селфи-палка</h3>
+              <span class="item__coast">500&nbsp;руб.</span>
             </a>
           </li>
           <li>
-            <a href="#">
+            <a class="item" href="#">
               <img src="img/item-2.jpg" alt="Профессиональная селфи-палка" width="360" height="380">
-              <h3>Профессиональная селфи-палка</h3>
-              <span>1&nbsp;500&nbsp;руб.</span>
+              <h3 class="item__title">Профессиональная селфи-палка</h3>
+              <span class="item__coast">1&nbsp;500&nbsp;руб.</span>
             </a>
           </li>
           <li>
-            <a href="#">
+            <a class="item" href="#">
               <img src="img/item-3.jpg" alt="Непотопляемая селфи-палка" width="360" height="380">
-              <h3>Непотопляемая селфи-палка</h3>
-              <span>2&nbsp;500&nbsp;руб.</span>
+              <h3 class="item__title">Непотопляемая селфи-палка</h3>
+              <span class="item__coast">2&nbsp;500&nbsp;руб.</span>
             </a>
           </li>
           <li>
-            <a href="#">
+            <a class="item" href="#">
               <img src="img/item-4.jpg" alt="Селфи-палка 'Следуй за мной'" width="360" height="380">
-              <h3>Селфи-палка &laquo;Следуй за&nbsp;мной&raquo;</h3>
-              <span>2&nbsp;500&nbsp;руб.</span>
+              <h3 class="item__title">Селфи-палка &laquo;Следуй за&nbsp;мной&raquo;</h3>
+              <span class="item__coast">2&nbsp;500&nbsp;руб.</span>
             </a>
           </li>
         </ol>
       </section>
     </main>
-    <footer>
+    <footer class="footer">
       <a href="index.html">
-        <img src="img/logo-device.svg" alt="Логотип Девайс" width="163" height="35">
+        <img src="img/logo-device.svg" alt="Логотип 'Device'" width="163" height="35">
       </a>
       <p>г. Москва, ул. Строителей, 15</p>
-      <ul>
-        <li><a href="">Доставка</a></li>
-        <li><a href="">Гарантия</a></li>
-        <li><a href="">Контакты</a></li>
+      <ul class="main-menu">
+        <li class="menu-item"><a href="#">Доставка</a></li>
+        <li class="menu-item"><a href="#">Гарантия</a></li>
+        <li class="menu-item"><a href="#">Контакты</a></li>
       </ul>
       <ul>
         <li><a href="#">Фейсбук</a></li>
         <li><a href="#">Инстаграм</a></li>
         <li><a href="#">Твиттер</a></li>
       </ul>
-      <a href="">Войти</a>
-      <a href="">Сравнить</a>
-      <a href="">Корзина</a>
+      <a href="" class="opacity-link">Войти</a>
+      <a href="" class="opacity-link">Сравнить</a>
+      <a href="" class="opacity-link">Корзина</a>
       <p>Тел.: <a href="tel:+74954959595">+7 (495) 495-95-95</a></p>
       <a href="htmlacademy.ru">
         <img src="img/logo-html.svg" alt="Сделано в htmlacademy" width="27" height="35">
