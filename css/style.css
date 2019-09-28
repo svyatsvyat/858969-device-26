@@ -19,7 +19,7 @@
 }
 
 /* Хорошо так делать или нет? */
-html {
+body {
   font-family: "Open Sans", Arial, sans-serif;
   color: #464646;
   font-size: 15px;
@@ -34,10 +34,10 @@ html {
   font-weight: 700;
   text-transform: uppercase;
   font-size: 18px;
-  letter-spacing: 2pt;
+  letter-spacing: 0.2em;
 }
 
-li.menu-item a{
+li.menu-item a {
   text-decoration: none;
 }
 
@@ -46,11 +46,11 @@ li.menu-item a{
 }
 
 /* Такое решение тоже меня смущает */
-h1, h2 {
+.h1-title {
   font-family: "Gilroy";
   font-weight: 700;
   font-size: 47px;
-  letter-spacing: 0.1pt;
+  letter-spacing: 0.01em;
   color: #000;
 }
 
@@ -68,7 +68,7 @@ h1, h2 {
   color: #000;
   text-decoration: none;
   text-transform: uppercase;
-  letter-spacing: 2pt;
+  letter-spacing: 0.2em;
   background: none;
   border: none;
   background-color: #f0c52e;
@@ -81,11 +81,11 @@ h1, h2 {
   color: white;
 }
 
-.opacity-link {
+.footer-link {
   opacity: 0.7;
 }
 
-aside {
+.filters {
   background-color: #efefef;
 }
 
@@ -94,25 +94,25 @@ aside {
   color: #000;
 }
 
-.item__title {
+.catalog-item-title {
   font-family: "Gilroy";
   font-weight: 700;
   font-size: 18px;
-  letter-spacing: 0.1pt;
+  letter-spacing: 0.01em;
 }
 
-.item__coast {
+.catalog-item-coast {
   font-family: "Gilroy";
   font-weight: 300;
   font-size: 16px;
-  letter-spacing: 0.1pt;
+  letter-spacing: 0.01em;
 }
 
-legend {
+.fieldset-title {
   font-family: "Gilroy";
   font-weight: 700;
   font-size: 18px;
-  letter-spacing: 0.1pt;
+  letter-spacing: 0.01em;
 }
 
 .breadcrumbs {
