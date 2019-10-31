@@ -4,8 +4,9 @@
   <meta charset="UTF-8">
   <title>Моноподы для селфи</title>
   <link href="css/style.css" rel="stylesheet">
+  <link href="https://necolas.github.io/normalize.css/8.0.1/normalize.css" rel="stylesheet">
 </head>
-<body class="inner-page">
+<body>
 <header class="main-header">
   <div class="container">
     <nav class="header-nav">
@@ -19,13 +20,15 @@
           <button type="submit" class="search-form-submit">Искать</button>
         </form>
         <div class="user-actions">
-          <a class="sign-in" href="">Войти</a>
+          <div class="sign-in">
+          <a href="">Валентин Петухов</a> <a href="" class="sign-out">Выйти</a>
+          </div>
           <a class="compare" href="">Сравнить</a>
           <a class="bag" href="">Корзина</a>
         </div>
       </div>
       <ul class="main-menu">
-        <li class="menu-item catalog"><a href="">Каталог товаров</a>
+        <li class="menu-item h2-title catalog-link"><a href="">Каталог товаров</a>
           <div class="submenu-wrapper">
             <ul class="submenu">
               <li class="menu-item"><a href="">Виртуальная реальность</a></li>
@@ -41,29 +44,38 @@
             </ul>
           </div>
         </li>
-        <li class="menu-item"><a href="">Доставка</a></li>
-        <li class="menu-item"><a href="">Гарантия</a></li>
-        <li class="menu-item contacts"><a href="">Контакты</a></li>
+        <li class="menu-item h2-title"><a href="">Доставка</a></li>
+        <li class="menu-item h2-title"><a href="">Гарантия</a></li>
+        <li class="menu-item h2-title contacts"><a href="">Контакты</a></li>
       </ul>
     </nav>
   </div>
 </header>
 <main>
   <div class="container container-catalog">
-    <h1 class="row h1-title">Моноподы для селфи</h1>
+    <h1 class="h1-title">Моноподы для селфи</h1>
     <div class="row">
       <ul class="breadcrumbs">
-        <li><a href="">Главная</a></li>
-        <li><a href="">Каталог товаров</a></li>
-        <li>Монопод для селфи</li>
+        <li><a href="">Главная</a><img class="arrow" src="img/nav-arrow.svg" alt=""></li>
+        <li><a href="">Каталог товаров</a><img class="arrow" src="img/nav-arrow.svg" alt=""></li>
+        <li><a href="">Монопод для селфи</a></li>
       </ul>
     </div>
   </div>
-  <div class="container reset-padding">
-    <div class="row">
-      <aside class="filters">
-        <h2 class="visually-hidden">Фильтрация</h2>
+
+  <div class="row">
+    <div class="left-side">
+      <div class="filter-gray-bg">
+        <div class="filter-wrapper">
+          <h2 class="h2-title">Фильтр:</h2>
+        </div>
+      </div>
+      <aside class="filter-wrapper">
         <form action="https://echo.htmlacademy.ru" method="post">
+          <fieldset>
+            <legend class="fieldset-title">Стоимость</legend>
+            <input type="range">
+          </fieldset>
           <fieldset>
             <legend class="fieldset-title">Цвет</legend>
             <label for="black" class="filter-checkbox">
@@ -108,7 +120,24 @@
           <button class="button" type="submit">Показать</button>
         </form>
       </aside>
-      <section class="reset-width">
+    </div>
+
+    <div class="right-side">
+      <div class="sort">
+        <div class="catalog-wrapper sort-wrapper">
+          <div class="categories">
+            <h2 class="h2-title">Сортировка:</h2>
+            <a href="">По цене</a>
+            <a href="">По типу</a>
+            <a href="">По популярности</a>
+          </div>
+          <div class="range-filter-wrapper">
+            <div class="range range-bottom"></div>
+            <div class="range range-top active"></div>
+          </div>
+        </div>
+        </div>
+      <section class="catalog-wrapper">
         <ol class="catalog">
           <li class="catalog-item">
             <a href="#">
@@ -118,7 +147,7 @@
               </div>
               <img src="img/item-1.jpg" alt="Любительская селфи-палка" width="360" height="380">
               <div class="catalog-item-title">
-                <h3>Любительская селфи-палка</h3>
+                <h3 class="h3-title">Любительская селфи-палка</h3>
                 <span class="catalog-item-coast">500&nbsp;руб.</span>
               </div>
             </a>
@@ -131,7 +160,7 @@
               </div>
               <img src="img/item-2.jpg" alt="Профессиональная селфи-палка" width="360" height="380">
               <div class="catalog-item-title">
-                <h3>Профессиональная селфи-палка</h3>
+                <h3 class="h3-title">Профессиональная селфи-палка</h3>
                 <span class="catalog-item-coast">1&nbsp;500&nbsp;руб.</span>
               </div>
             </a>
@@ -144,7 +173,7 @@
               </div>
               <img src="img/item-3.jpg" alt="Непотопляемая селфи-палка" width="360" height="380">
               <div class="catalog-item-title">
-                <h3>Непотопляемая селфи-палка</h3>
+                <h3 class="h3-title">Непотопляемая селфи-палка</h3>
                 <span class="catalog-item-coast">2&nbsp;500&nbsp;руб.</span>
               </div>
             </a>
@@ -155,14 +184,23 @@
                 <button class="button" type="button">В корзину</button>
                 <a href="">Добавить к сравнению</a>
               </div>
-              <img src="img/item-4.jpg" alt="Селфи-палка 'Следуй за мной'" width="360" height="380">
+              <img src="img/item-4.jpg" alt="Селфи-палка " Следуй за мной"" width="360" height="380">
               <div class="catalog-item-title">
-                <h3>Селфи-палка &laquo;Следуй за&nbsp;мной&raquo;</h3>
+                <h3 class="h3-title">Селфи-палка &laquo;Следуй за&nbsp;мной&raquo;</h3>
                 <span class="catalog-item-coast">2&nbsp;500&nbsp;руб.</span>
               </div>
             </a>
           </li>
         </ol>
+        <div class="pagination">
+          <a href="" class="h2-title">Назад</a>
+          <ul class="h2-title">
+            <li><a href="">1</a></li>
+            <li><a href="">2</a></li>
+            <li><a href="">3</a></li>
+          </ul>
+          <a href="" class="h2-title">Вперед</a>
+        </div>
       </section>
     </div>
   </div>
@@ -171,21 +209,21 @@
   <div class="container reset-padding">
     <div class="footer-wrapper align-left">
       <a href="index.html">
-        <img src="img/logo-device-y.svg" alt="Логотип 'Device'" width="163" height="35">
+        <img src="img/logo-device-y.svg" alt="Логотип "Device"" width="163" height="35">
       </a>
       <p class="footer-adress">г. Москва, ул. Строителей, 15</p>
-      <div class="yellow-brick"></div>
+      <div class="brick yellow"></div>
     </div>
     <div class="footer-wrapper align-center">
       <ul class="main-menu">
-        <li class="menu-item"><a href="#">Доставка</a></li>
-        <li class="menu-item"><a href="#">Гарантия</a></li>
-        <li class="menu-item"><a href="#">Контакты</a></li>
+        <li class="menu-item h2-title"><a href="#">Доставка</a></li>
+        <li class="menu-item h2-title"><a href="#">Гарантия</a></li>
+        <li class="menu-item h2-title"><a href="#">Контакты</a></li>
       </ul>
       <ul class="footer-social-media">
-        <li><a href="#"><img src="img/fb.svg" alt=""></a></li>
-        <li><a href="#"><img src="img/instagram.svg" alt=""></a></li>
-        <li><a href="#"><img src="img/twitter.svg" alt=""></a></li>
+        <li><a href="#"><img src="img/fb.svg" alt="Наша группа в Фейсбук" width="32" height="32"></a></li>
+        <li><a href="#"><img src="img/instagram.svg" alt="Мы в Инстаграм" width="32" height="32"></a></li>
+        <li><a href="#"><img src="img/twitter.svg" alt="Наш Твиттер" width="32" height="32"></a></li>
       </ul>
     </div>
     <div class="footer-wrapper align-right">
@@ -195,7 +233,7 @@
         <a href="" class="bag footer-link">Корзина</a>
       </div>
       <p class="footer-phone">Тел.: <a href="tel:+74954959595">+7 (495) 495-95-95</a></p>
-      <a href="htmlacademy.ru" class="footer-html-icon">
+      <a href="https://htmlacademy.ru/intensive/htmlcss" class="footer-html-icon">
         <img src="img/logo-html.svg" alt="Сделано в htmlacademy" width="27" height="35">
       </a>
     </div>
