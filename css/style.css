@@ -50,6 +50,7 @@ body {
   font-size: 15px;
   font-weight: lighter;
   margin: 0;
+  min-width: 1160px;
 }
 
 img {
@@ -61,11 +62,11 @@ a {
   color: #000000;
 }
 
-a:hover {
+.main-header a:hover, .footer a:hover {
   opacity: 0.6;
 }
 
-a:active {
+.main-header a:active, .footer a:active {
   opacity: 0.3;
 }
 
@@ -645,6 +646,8 @@ img.monopad {
 }
 
 .partners-logo {
+  display: inline-block;
+  vertical-align: middle;
   width: 260px;
   height: 100px;
   cursor: pointer;
@@ -951,6 +954,8 @@ input[type="text"]:focus, input[type="email"]:focus, textarea:focus {
   background-repeat: no-repeat;
   height: 555px;
   box-sizing: border-box;
+  padding: 0;
+  overflow: hidden;
 }
 
 /*Breadcrumbs*/
@@ -1374,8 +1379,8 @@ input[type="text"]:focus, input[type="email"]:focus, textarea:focus {
 .catalog-item.sale:after {
   content: "NEW";
   position: absolute;
-  right: 20px;
-  top: 20px;
+  right: 26px;
+  top: 28px;
   z-index: 100;
   width: 60px;
   height: 60px;
