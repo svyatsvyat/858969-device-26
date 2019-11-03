@@ -79,9 +79,9 @@
       <h1 class="h1-title">Моноподы для селфи</h1>
       <div class="row">
         <ul class="breadcrumbs">
-          <li><a href="">Главная</a><img class="arrow" src="img/nav-arrow.svg" alt=""></li>
-          <li><a href="">Каталог товаров</a><img class="arrow" src="img/nav-arrow.svg" alt=""></li>
-          <li><a href="">Монопод для селфи</a></li>
+          <li><a href="">Главная</a></li>
+          <li><a href="">Каталог товаров</a></li>
+          <li><a href="">Моноподы для селфи</a></li>
         </ul>
       </div>
     </div>
@@ -90,14 +90,18 @@
       <div class="left-side">
         <div class="filter-header bg-gray">
           <div class="filter-wrapper">
-            <h2 class="h2-title">Фильтр:</h2>
+            <h2 class="h4-title">Фильтр:</h2>
           </div>
         </div>
         <aside class="filter-wrapper">
           <form action="https://echo.htmlacademy.ru" method="post">
             <fieldset class="coast">
               <legend class="h3-title fieldset-title">Стоимость</legend>
-              <input type="range">
+              <div class="coast-range">
+                <button class="range-btn start"><div class="range-point"></div><p>от 0</p></button>
+                <button class="range-btn end"><div class="range-point"></div><p>до 5000</p></button>
+                <div class="coast-range-value"></div>
+              </div>
             </fieldset>
             <fieldset>
               <legend class="h3-title fieldset-title">Цвет</legend>
@@ -149,7 +153,7 @@
         <div class="row justify-between sort bg-gray">
           <div class="row justify-between catalog-wrapper">
             <div class="categories">
-              <h2 class="h2-title">Сортировка:</h2>
+              <h2 class="h4-title">Сортировка:</h2>
               <a href="">По цене</a>
               <a href="">По типу</a>
               <a href="">По популярности</a>
@@ -180,7 +184,7 @@
               </div>
               <img src="img/item-2.jpg" alt="Профессиональная селфи-палка" width="360" height="380">
               <div class="catalog-item-title">
-                <h3 class="h3-title">Профессиональная селфи-палка</h3>
+                <h3 class="h3-title">Профессиональная<br>селфи-палка</h3>
                 <span class="catalog-item-coast">1&nbsp;500&nbsp;руб.</span>
               </div>
             </li>
@@ -203,7 +207,7 @@
               <img src="img/item-4.jpg" alt="Селфи-палка" width="360" height="380">
               <div class="catalog-item-title">
                 <h3 class="h3-title">Селфи-палка &laquo;Следуй за&nbsp;мной&raquo;</h3>
-                <span class="catalog-item-coast">2&nbsp;500&nbsp;руб.</span>
+                <span class="catalog-item-coast">4&nbsp;900&nbsp;руб.</span>
               </div>
             </li>
           </ol>
