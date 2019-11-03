@@ -161,9 +161,10 @@ a.button:hover, a.button:active {
 .button {
   border: none;
   background-color: transparent;
-  padding: 11px 23px;
+  padding: 11px;
   position: relative;
   cursor: pointer;
+  text-align: center;
 }
 
 .button:before {
@@ -204,13 +205,16 @@ a.button:hover, a.button:active {
 }
 
 .header-nav .logo {
+  display: inline-block;
+  vertical-align: middle;
   width: 163px;
+  height: 35px;
   position: relative;
   top: -18px;
 }
 
 .search-form-wrapper {
-  margin-bottom: 26px;
+  margin-bottom: 30px;
 }
 
 .search-form-wrapper .search-form {
@@ -227,10 +231,9 @@ a.button:hover, a.button:active {
   font-size: 15px;
   font-weight: lighter;
   padding: 2px 40px;
-  padding-bottom: 10px;
   background-image: url("../img/search.svg");
   background-repeat: no-repeat;
-  background-position: 2px 13px;
+  background-position: 3px 15px;
 }
 
 .search-form-input::placeholder {
@@ -238,19 +241,18 @@ a.button:hover, a.button:active {
   opacity: 0.3;
 }
 
-.search-form:hover .search-form-input::placeholder {
+.search-form-input:hover::placeholder {
   opacity: 0.6;
 }
-
-.search-form:focus-within .search-form-input {
+.search-form-input:focus {
   border-bottom: 2px solid #000000;
 }
 
-.search-form:focus-within .search-form-input::placeholder {
+.search-form-input:focus::placeholder {
   opacity: 1;
 }
 
-.search-form:focus-within .search-form-submit {
+.search-form-input:focus ~ .search-form-submit {
   visibility: visible;
 }
 
@@ -281,7 +283,6 @@ a.button:hover, a.button:active {
   flex-grow: 0;
   flex-basis: auto;
   width: 500px;
-  padding-bottom: 10px;
 }
 
 .user-actions > span {
@@ -293,15 +294,16 @@ a.button:hover, a.button:active {
 }
 
 .user-actions svg {
-  margin-right: 13px;
+  margin-right: 12px;
 }
 
-.user-actions .authorization {
-  margin-right: auto;
+.authorization {
+  display: flex;
+  flex-grow: 1;
 }
 
 .sign-out {
-  margin-left: 18px;
+  margin-left: 22px;
   opacity: 0.3;
 }
 
@@ -385,6 +387,7 @@ a.button:hover, a.button:active {
 .slider {
   display: none;
   margin-bottom: 104px;
+  border-top: 112px solid rgba(240, 197, 46, 0.5);
 }
 
 .slider.slider-show {
@@ -421,29 +424,40 @@ img.monopad {
   line-height: 1.2;
 }
 
-.decoration {
-  flex-grow: 0;
-  flex-basis: auto;
-  justify-content: space-between;
-  align-items: center;
-  width: 500px;
-  margin-left: auto;
-  margin-bottom: -48px;
-}
-
-.decoration .brick {
-  margin-bottom: 70px;
+.slider-content .h1-title:before {
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
   width: 100px;
+  height: 7px;
+  background-color: #ffffff;
+  position: absolute;
+  left: 0;
+  top: -43px;
 }
 
-.decoration .number {
+.slider-content .h1-title:after {
+  content: "01";
+  width: 180px;
+  height: 180px;
+  display: inline-block;
+  vertical-align: middle;
   font-family: "Gilroy", Arial, sans-serif;
   font-size: 179px;
   color: #ffffff;
   font-weight: 800;
   line-height: 0.9;
-  position: relative;
+  position: absolute;
   right: -10px;
+  top: -85px;
+}
+
+.slider-content.slider-2 .h1-title:after {
+  content: "02";
+}
+
+.slider-content.slider-3 .h1-title:after {
+  content: "03";
 }
 
 .slider-tabs-wrapper {
@@ -508,7 +522,7 @@ img.monopad {
 .popular {
   justify-content: space-between;
   list-style: none;
-  margin-bottom: 62px;
+  margin-bottom: 60px;
 }
 
 .popular li {
@@ -553,6 +567,7 @@ img.monopad {
 .services {
   top: -100px;
   margin-bottom: -35px;
+  padding-bottom: 5px;
 }
 
 .services-block {
@@ -568,7 +583,7 @@ img.monopad {
   width: 283px;
   z-index: 100;
   border-right: 7px solid #000000;
-  padding-top: 67px;
+  padding-top: 65px;
 }
 
 .tab-content {
@@ -584,7 +599,7 @@ img.monopad {
 
 .tab-text {
   width: 560px;
-  padding-top: 74px;
+  padding-top: 70px;
   padding-left: 117px;
   padding-bottom: 62px;
 }
@@ -594,12 +609,12 @@ img.monopad {
 }
 
 .tab-content img {
-  margin-top: 88px;
+  margin-top: 85px;
   margin-right: 66px;
 }
 
 .services-tabs .tab {
-  width: 158px;
+  width: 160px;
   display: inline-block;
   vertical-align: middle;
   text-align: center;
@@ -662,7 +677,7 @@ img.monopad {
 }
 
 .about-company .h1-title {
-  margin-bottom: 38px;
+  margin-bottom: 40px;
 }
 
 .about-company p {
@@ -677,16 +692,27 @@ img.monopad {
 .about-company .button {
   display: inline-block;
   vertical-align: baseline;
-  margin-top: 66px;
-  width: 265px;
+  margin-top: 65px;
+  width: 260px;
 }
 
 .about-company .preview-map {
   margin-top: 10px;
 }
 
-.about-company .brick {
-  margin-bottom: 42px;
+.about-company h2:before {
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+  width: 80px;
+  height: 7px;
+  background-color: #000000;
+  position: absolute;
+  top: 0;
+}
+
+.about-company h2 {
+  margin-top: 50px;
 }
 
 ul.partners-list {
@@ -697,7 +723,7 @@ ul.partners-list {
 
 ul.partners-list li {
   margin-bottom: 22px;
-  margin-left: 5px;
+  margin-left: 3px;
   list-style: none;
 }
 
@@ -705,13 +731,12 @@ ul.partners-list li:before {
   content: "";
   display: inline-block;
   vertical-align: baseline;
-  margin-bottom: 2px;
-  width: 5px;
-  height: 5px;
+  width: 7px;
+  height: 7px;
   border: 2px solid #ccc;
-  border-radius: 5px;
+  border-radius: 7px;
   position: relative;
-  right: 25px;
+  right: 28px;
 }
 
 ul.partners-list li:last-child {
@@ -745,6 +770,10 @@ ul.partners-list li:last-child {
   text-align: right;
 }
 
+.footer-phone a:hover {
+  opacity: 1;
+}
+
 .footer .main-menu, .footer .footer-social-media {
   display: flex;
   flex-basis: auto;
@@ -761,6 +790,16 @@ ul.partners-list li:last-child {
 
 .footer-actions .authorization {
   margin-right: 0px;
+  flex-grow: 0;
+}
+
+.footer-actions {
+  align-self: end;
+  line-height: 2;
+}
+
+.footer-actions svg {
+  margin-right: 9px;
 }
 
 .footer-actions a {
@@ -983,18 +1022,20 @@ input[type="text"]:focus, input[type="email"]:focus, textarea:focus {
 
 .left-side {
   display: flex;
-  flex-basis: 32.5%;
+  flex-basis: 330px;
+  flex-grow: 1;
   flex-flow: column;
   align-items: flex-end;
   background-color: #efefef;
 }
 
 .right-side {
-  flex-basis: 67.5%;
+  flex-basis: 830px;
+  flex-grow: 1;
 }
 
 .container.container-catalog {
-  margin-top: 36px;
+  margin-top: 35px;
   padding-right: 0;
 }
 
@@ -1008,7 +1049,11 @@ input[type="text"]:focus, input[type="email"]:focus, textarea:focus {
 }
 
 .filter-wrapper form {
-  margin-top: 70px;
+  margin-top: 68px;
+}
+
+.filter-wrapper .button {
+  z-index: 1;
 }
 
 .filter-wrapper fieldset {
@@ -1021,16 +1066,13 @@ input[type="text"]:focus, input[type="email"]:focus, textarea:focus {
   padding: 0;
 }
 
-fieldset.coast {
-  margin-bottom: 68px;
-}
-
 .coast-range {
   width: 100%;
   height: 2px;
   background-color: #dbdbdb;
   position: relative;
   margin-top: 8px;
+  margin-bottom: 24px;
 }
 
 .coast-range-value {
@@ -1052,6 +1094,7 @@ fieldset.coast {
   cursor: pointer;
   display: flex;
   flex-flow: column;
+  z-index: 2;
 }
 
 .range-btn:focus {
@@ -1100,12 +1143,13 @@ fieldset.coast {
 .fieldset-title {
   display: block;
   width: 100%;
-  padding-top: 10px;
-  margin-bottom: 28px;
+  padding-top: 12px;
+  margin-bottom: 27px;
   border-top: 2px solid #000000;
 }
 
 .filter-checkbox, .filter-radio {
+  display: block;
   position: relative;
   padding-left: 40px;
   padding-top: 3px;
@@ -1213,6 +1257,8 @@ fieldset.coast {
 .range {
   width: 12px;
   height: 12px;
+  display: inline-block;
+  vertical-align: middle;
   border-top: 12px solid #000000;
   border-left: 6px solid transparent;
   border-right: 6px solid transparent;
@@ -1240,6 +1286,7 @@ fieldset.coast {
 
 .catalog {
   display: flex;
+  width: 100%;
   flex-wrap: wrap;
   margin: 0;
   padding: 0;
@@ -1248,7 +1295,7 @@ fieldset.coast {
 
 .catalog-wrapper {
   width: 830px;
-  padding-left: 73px;
+  padding-left: 70px;
   flex-basis: auto;
   flex-grow: 0;
 }
@@ -1319,6 +1366,11 @@ fieldset.coast {
   margin-top: 34px;
 }
 
+.catalog-item-title a {
+   display: inline-block;
+  vertical-align: middle;
+}
+
 .catalog-item.sale:after {
   content: "NEW";
   position: absolute;
@@ -1335,7 +1387,6 @@ fieldset.coast {
   font-weight: 800;
   color: rgba(0, 0, 0, 0.1);
   border: 2px solid rgba(0, 0, 0, 0.1);
-
 }
 
 /*Pagination*/
@@ -1372,6 +1423,7 @@ fieldset.coast {
 
 .pagination-forward, .pagination-back {
   text-align: center;
+  display: inline-block;
   padding: 25px 30px;
   width: 132px;
 }
