@@ -101,8 +101,8 @@
             <fieldset class="coast">
               <legend class="h3-title fieldset-title">Стоимость</legend>
               <div class="coast-range">
-                <button class="range-btn start" type="button"><div class="range-point"></div><p>от 0</p></button>
-                <button class="range-btn end" type="button"><div class="range-point"></div><p>до 5000</p></button>
+                <button class="range-btn start" type="button" aria-label="Range-min"><div class="range-point"></div><p>от 0</p></button>
+                <button class="range-btn end" type="button" aria-label="Range-max"><div class="range-point"></div><p>до 5000</p></button>
                 <div class="coast-range-value"></div>
               </div>
             </fieldset>
@@ -162,8 +162,8 @@
               <a href="">По популярности</a>
             </div>
             <div class="range-filter-wrapper">
-              <a href="" class="range range-bottom"></a>
-              <a href="" class="range range-top active"></a>
+              <a href="" class="range range-bottom" aria-label="Range-bottom"></a>
+              <a href="" class="range range-top active" aria-label="Range-top"></a>
             </div>
           </div>
         </div>
@@ -270,12 +270,24 @@
         <div class="row justify-between">
           <div class="brick yellow"></div>
           <ul class="footer-social-media">
-            <li><a href="#"><img src="img/fb.svg" alt="Наша группа в Фейсбук" width="32" height="32"></a></li>
-            <li><a href="#"><img src="img/instagram.svg" alt="Мы в Инстаграм" width="32" height="32"></a></li>
-            <li><a href="#"><img src="img/twitter.svg" alt="Наш Твиттер" width="32" height="32"></a></li>
+            <li>
+              <a href="#" aria-label="Facebook">
+                <img src="img/fb.svg" alt="Наша группа в Фейсбук" width="32" height="32">
+              </a>
+            </li>
+            <li>
+              <a href="#" aria-label="Instagram">
+                <img src="img/instagram.svg" alt="Мы в Инстаграм" width="32" height="32">
+              </a>
+            </li>
+            <li>
+              <a href="#" aria-label="Twitter">
+                <img src="img/twitter.svg" alt="Наш Твиттер" width="32" height="32">
+              </a>
+            </li>
           </ul>
           <a href="https://htmlacademy.ru/intensive/htmlcss" class="footer-html-icon">
-            <img src="img/logo-html.svg" alt="Сделано в htmlacademy" width="27" height="35">
+            <img src="img/logo-html.svg" aria-label="Htmlacademy" alt="Сделано в htmlacademy" width="27" height="35">
           </a>
         </div>
       </div>

@@ -413,12 +413,24 @@
         <div class="row justify-between">
           <div class="brick yellow"></div>
           <ul class="footer-social-media">
-            <li><a href="#"><img src="img/fb.svg" alt="Наша группа в Фейсбук" width="32" height="32"></a></li>
-            <li><a href="#"><img src="img/instagram.svg" alt="Мы в Инстаграм" width="32" height="32"></a></li>
-            <li><a href="#"><img src="img/twitter.svg" alt="Наш Твиттер" width="32" height="32"></a></li>
+            <li>
+              <a href="#" aria-label="Facebook">
+                <img src="img/fb.svg" alt="Наша группа в Фейсбук" width="32" height="32">
+              </a>
+            </li>
+            <li>
+              <a href="#" aria-label="Instagram">
+                <img src="img/instagram.svg" alt="Мы в Инстаграм" width="32" height="32">
+              </a>
+            </li>
+            <li>
+              <a href="#" aria-label="Twitter">
+                <img src="img/twitter.svg" alt="Наш Твиттер" width="32" height="32">
+              </a>
+            </li>
           </ul>
           <a href="https://htmlacademy.ru/intensive/htmlcss" class="footer-html-icon">
-            <img src="img/logo-html.svg" alt="Сделано в htmlacademy" width="27" height="35">
+            <img src="img/logo-html.svg" aria-label="Htmlacademy" alt="Сделано в htmlacademy" width="27" height="35">
           </a>
         </div>
       </div>
@@ -449,36 +461,6 @@
         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2249.1125488779976!2d37.52742931592807!3d55.687030980535816!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54cf65f5c8955%3A0x694710ccd55501e!2z0YPQuy4g0KHRgtGA0L7QuNGC0LXQu9C10LksIDE1LCDQnNC-0YHQutCy0LAsIDExOTMxMQ!5e0!3m2!1sru!2sru!4v1572808113895!5m2!1sru!2sru"
         width="100%" height="100%" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
     </div>
-
-    <script>
-      var button = document.querySelector(".contact-btn");
-      var contact_modal_popup = document.querySelector("#contact-form");
-      var close = document.querySelector("#form-close")
-
-      button.addEventListener("click", function (evt) {
-        evt.preventDefault();
-        contact_modal_popup.classList.add("modal-show");
-      });
-
-      close.addEventListener("click", function (evt) {
-        evt.preventDefault();
-        contact_modal_popup.classList.remove("modal-show");
-      });
-    </script>
-    <script>
-      var map_button = document.querySelector(".preview-map");
-      var map_popup = document.querySelector("#map-form");
-      var close = document.querySelector("#map-close");
-
-      map_button.addEventListener("click", function (evt) {
-        evt.preventDefault();
-        map_popup.classList.add("modal-show");
-      });
-
-      close.addEventListener("click", function (evt) {
-        evt.preventDefault();
-        map_popup.classList.remove("modal-show");
-      });
-    </script>
+  <script src="js/modal.js"></script>
   </body>
 </html>
