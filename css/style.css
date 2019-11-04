@@ -988,6 +988,10 @@ input[type="text"]:focus, input[type="email"]:focus, textarea:focus {
   margin-right: 40px;
 }
 
+input.error, input:invalid {
+  background-color: #f6dada;
+}
+
 .field {
   display: flex;
   flex-flow: column;

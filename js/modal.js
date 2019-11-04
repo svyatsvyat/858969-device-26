@@ -1,19 +1,22 @@
 //Pop-up
 var button = document.querySelector(".contact-btn");
 var contactPopup = document.querySelector("#contact-form");
-var close = document.querySelector("#form-close")
-var user = contactPopup.querySelector("[name=name]");
-var email = contactPopup.querySelector("[name=email]");
+var close = document.querySelector("#form-close");
+var contactForm = contactPopup.querySelector("form");
+var user = contactForm.querySelector("[name=name]");
+var email = contactForm.querySelector("[name=email]");
 
 var mapButton = document.querySelector(".preview-map");
 var mapPopup = document.querySelector("#map-form");
 var mapClose = document.querySelector("#map-close");
 
 var isStorageSupport = true;
-var storage = "";
+var storageUser = "";
+var storageEmail = "";
 
 try {
-  storage = localStorage.getItem("login");
+  storageUser = localStorage.getItem("user");
+  storageEmail = localStorage.getItem("email");
 } catch (err) {
   isStorageSupport = false;
 }
@@ -34,15 +37,21 @@ button.addEventListener("click", function (evt) {
 
 //Validation
 
-contactPopup.addEventListener("submit", function (evt) {
+contactForm.addEventListener("submit", function (evt) {
 
   if (!user.value || !email.value) {
     evt.preventDefault();
+    if (!user.value) {
+      user.classList.add("error");
+    }
+    if (!email.value) {
+      email.classList.add("error");
+    }
     contactPopup.classList.add("modal-error");
-    console.log("Нужно ввести логин и пароль");
   } else {
     if (isStorageSupport) {
       localStorage.setItem("user", user.value);
+      localStorage.setItem("email", email.value);
     }
   }
 });
@@ -84,9 +93,9 @@ mapClose.addEventListener("click", function (evt) {
 window.addEventListener("keydown", function (evt) {
   if (evt.keyCode === 27) {
     evt.preventDefault();
-    if (contactPopup.classList.contains("modal-show")) {
-      contactPopup.classList.remove("modal-show");
-      contactPopup.classList.remove("modal-error");
+    if (mapPopup.classList.contains("modal-show")) {
+      mapPopup.classList.remove("modal-show");
+      mapPopup.classList.remove("modal-error");
     }
   }
 });

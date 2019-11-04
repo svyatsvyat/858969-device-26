@@ -435,26 +435,26 @@
         </div>
       </div>
     </footer>
-    <form method="post" action="https://echo.htmlacademy.ru" id="contact-form" class="modal">
+    <div id="contact-form" class="modal">
       <div class="modal-close" id="form-close"></div>
-      <div class="row justify-between">
-        <div class="field">
-          <label for="name">Ваше имя</label>
-          <input type="text" name="name" id="name" placeholder="Имя Фамилия" required>
+      <form method="post" action="https://echo.htmlacademy.ru">
+        <div class="row justify-between">
+          <div class="field">
+            <label for="name">Ваше имя</label>
+            <input type="text" name="name" id="name" placeholder="Имя Фамилия">
+          </div>
+          <div class="field">
+            <label for="e-mail-2">Ваш e-mail</label>
+            <input type="email" id="e-mail-2" name="email" placeholder="example@email.com">
+          </div>
         </div>
-        <div class="field">
-          <label for="e-mail-2">Ваш e-mail</label>
-          <input type="email" id="e-mail-2" name="email" placeholder="example@email.com" required>
+        <div class="row field">
+          <label for="mail">Текст письма</label>
+          <textarea name="text" id="mail" cols="30" rows="5"></textarea>
         </div>
-      </div>
-      <div class="row field">
-        <label for="mail">Текст письма</label>
-        <textarea name="text" id="mail" cols="30" rows="5"></textarea>
-      </div>
-      <div class="row">
         <button type="submit" class="button">Отправить</button>
-      </div>
-    </form>
+      </form>
+    </div>
     <div class="modal map" id="map-form">
       <div class="modal-close" id="map-close"></div>
       <iframe
