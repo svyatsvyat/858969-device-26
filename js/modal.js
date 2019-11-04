@@ -27,11 +27,20 @@ button.addEventListener("click", function (evt) {
   evt.preventDefault();
   contactPopup.classList.add("modal-show");
 
-  if (storage) {
-    user.value = storage;
-    email.focus();
-  } else {
+  if (!storageUser && !storageEmail) {
     user.focus();
+  }
+  if (storageUser && !storageEmail) {
+    user.value = storageUser;
+    email.focus();
+  }
+  if (!storageUser && storageEmail) {
+    email.value = storageEmail;
+    user.focus();
+  }
+  if (storageUser && storageEmail) {
+    user.value = storageUser;
+    email.value = storageEmail;
   }
 });
 
