@@ -1157,8 +1157,6 @@ iframe.map {
   background-color: transparent;
   top: -10px;
   position: absolute;
-  font-size: 14px;
-  color: rgba(0, 0, 0, 0.2);
   cursor: pointer;
   display: flex;
   flex-flow: column;
@@ -1169,8 +1167,10 @@ iframe.map {
   outline: 0;
 }
 
-.range-btn p {
+.range-btn .range-count {
   margin-top: 5px;
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.2);
 }
 
 .range-btn.start {
