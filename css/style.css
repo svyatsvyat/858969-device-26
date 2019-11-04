@@ -1007,6 +1007,11 @@ input.error, input:invalid {
   margin-bottom: 5px;
 }
 
+iframe.map {
+  width: 100%;
+  height: 100%;
+}
+
 .modal.map {
   background-image: url("../img/map-big.jpg");
   background-repeat: no-repeat;
