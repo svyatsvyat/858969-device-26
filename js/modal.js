@@ -50,6 +50,8 @@ contactForm.addEventListener("submit", function (evt) {
 
   if (!user.value || !email.value) {
     evt.preventDefault();
+    contactPopup.classList.remove("modal-error");
+    contactPopup.offsetWidth = contactPopup.offsetWidth;
     if (!user.value) {
       user.classList.add("error");
     }
