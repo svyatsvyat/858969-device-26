@@ -868,6 +868,7 @@ ul.partners-list li:last-child {
   padding: 100px;
   padding-bottom: 95px;
   top: 90px;
+  z-index: 100;
 }
 
 .modal.modal-show {

@@ -67,6 +67,13 @@ contactForm.addEventListener("submit", function (evt) {
   }
 });
 
+email.addEventListener("focusout", function (evt) {
+  evt.preventDefault();
+  if (!email.checkValidity()) {
+    contactPopup.classList.add("modal-error");
+  }
+});
+
 //Esc
 
 window.addEventListener("keydown", function (evt) {
